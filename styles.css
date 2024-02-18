@@ -7,14 +7,22 @@ header {
     position: fixed;
     height: 10%;
     width: 100%;
+    border: 2px solid grey;
 }
 
 /* Panel de navegacion */
 .header_nav {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
     position: relative;
     display: flex;
     justify-content: center;
-    top: 90%;
+    gap: 10px;
+    top: 85%;
     text-align: center;
 }
 
@@ -22,24 +30,23 @@ header {
 #header_a {
     background-color: grey;
     border: 2px solid rgb(112, 112, 112);
+    border-radius: 20px;
     color: antiquewhite;
     text-decoration: none;
-    padding: 5px;
+    padding: 10px;
 }
 
-/* todo: fix grid */
 .main {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;  
     position: absolute;
     display: grid;
     top: 15%;
     margin-left: 5%;
-}
-
-.images {
-    display: grid;
-    position: relative;
-    gap: 50px;
-
 }
 
 #images_img {
@@ -52,13 +59,43 @@ header {
     transform: scale(1.2);
 }
 
-.contents {
-    background-color: aqua;
-    position: relative;
+/* Grid para imagenes y texto */
+.images {
     display: grid;
-    margin-left: 5%;
-    grid-column-start: 2;
-    grid-column-end: 2;
+    position: relative;
+    gap: 50px;
     grid-row-start: 1;
     grid-row-end: 3;
+    grid-column: 1;
+}
+
+.contents1 {
+    background-color: antiquewhite;
+    position: relative;
+    grid-row: 1;
+    grid-column: 2;
+    margin-right: 5%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
+}
+.contents2 {
+    background-color: antiquewhite;
+    position: relative;
+    grid-row: 2;
+    grid-column: 2;
+    margin-right: 5%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
+}
+.contents3 {
+    background-color: antiquewhite;
+    position: relative;
+    grid-row: 3;
+    grid-column: 2;
+    margin-right: 5%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
 }
