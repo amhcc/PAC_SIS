@@ -8,6 +8,11 @@ header {
     height: 10%;
     width: 100%;
     border: 2px solid grey;
+    z-index: 1000; /* Define el nivel de profundidad del objeto */
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Panel de navegacion */
@@ -47,7 +52,24 @@ header {
     display: grid;
     top: 15%;
     margin-left: 5%;
+    z-index: 0; /* Define el nivel de profundidad del objeto */
 }
+
+.main_cont {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;  
+    position: absolute;
+    display: block;
+    column-gap: 50px;
+    top: 15%;
+    margin-left: 25px;
+    z-index: 0; /* Define el nivel de profundidad del objeto */
+}
+
 
 #images_img {
     height: 250px;
@@ -98,4 +120,41 @@ header {
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 15px;
+}
+/* todo: fix spacing, give format to index */
+.index {
+    position: fixed;
+    width: 250px;
+}
+
+.linux_cont {
+    position: absolute;
+    left: 300px;
+    justify-content: center;
+}
+
+/* Contenidos how-to */
+#howto_1 {
+    height: 350px;
+    width: 700px;
+    justify-self: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#howto_2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    justify-self: center;
+}
+
+code {
+    color: antiquewhite;
+    display: block;
+    background-color: grey;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: fit-content;
+    font-weight: 600;
 }

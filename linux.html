@@ -18,6 +18,75 @@
             <a id="header_a" href="windows.html">Instalacion Windows</a>
         </nav>
     </header>
-
+    <div class="main_cont">
+        <div class="index">
+            <h2>Contenidos</h2>
+            <ul>
+                <li><a href="#paso1linux">1. Descarga del archivo .iso</a></li>
+                <li><a href="#paso2linux">2. Creacion y configuracion en VirtualBox</a></li>
+                <li><a href="#paso3linux">3. Pop!_os</a></li>
+                <li><a href="#paso4linux">4. Samba</a></li>
+                <li><a href="#paso5linux">5. Creacion de usuario</a></li>
+            </ul>
+        </div>
+        <div class="linux_cont">
+            <h1 id="paso1linux">1. Descarga del archivo .iso</h1>
+            <p>
+                El primer paso para la instalacion de linux es la descarga del archivo .iso que sera utilizado
+                para la instalacion del mismo en VirtualBox. En este paso a paso utilizaremos la distribucion
+                de Linux Pop!_os. Para ello descargaremos el archivo del siguiente <a href="https://pop.system76.com/">enlace</a>. 
+                Y seleccionaremos la primera opcion.
+            </p>
+            <a id="howto_1" href="https://pop.system76.com/"><img id="howto_1" src="resources/linux/Paso1Descarga.png" alt="Paso1Descarga"></a>
+            <h1 id="paso2linux">2. Creacion y configuracion en VirtualBox</h1>
+            <p>
+                Despues de <a href="virtualbox.html">instalar VirtualBox</a> y realizar su configuracion inicial,
+                empezamos con la creacion de la maquina virtual. Tras abrir VirtualBox presionamos el boton "New".
+            </p>
+            <img id="howto_2" src="resources/linux/Paso2.png" alt="Paso2NuevaMaquina">
+            <p>
+                Tras presionar el boton "New", se abrira una ventana para la configuracion de esta. Aqui eligiremos el nombre de la maquina virtual,
+                el archivo .iso, el nombre de usuario, el hardware que queremos que esta tenga y el espacio de disco duro que tendra
+                la maquina virtual.
+            </p>
+            <img id="howto_2" src="resources/linux/Paso3.png" alt="Paso3CreacionMaquina-1">
+            <p>
+                Como podemos observar se abre una ventana donde insertaremos el nombre de esta, puede ser cualquier nombre
+                que el usuario quiera insertar, y eligiremos nuestro archivo .iso que descargamos anteriormente.
+            </p>
+            <img id="howto_2" src="resources/linux/Paso4.png" alt="Paso4.iso">
+            <p>
+                En el siguiente paso le asignaremos memoria RAM y una cantidad de CPUs a la maquina virtual.
+                Le asignaremos 4GB de memoria RAM y 4 CPUs ya que estos son los requisitos minimos recomendables para este sistema.
+            </p>
+            <img id="howto_2" src="resources/linux/Paso5.png" alt="Paso5Hardware">
+            <p>
+                Por ultimo, asignamos un espacio para el disco dura virtual de la maquina virtual. El minimo recomendado es 20GB.
+            </p>
+            <img id="howto_2" src="resources/linux/Paso6.png" alt="Paso6Disco">
+            <h1 id="paso3linux">3. Pop!_os</h1>
+            <p>
+                Una vez instalada y configurada, realizamos la configuracion del sistema por defecto tal y como
+                se indica en el siguiente <a href="https://support.system76.com/articles/install-pop/">enlace</a>.
+                Al entrar al sistema, abrimos una terminal. Esta se puede abrir presionando en el icono de la terminal,
+                o presionando la tecla "Windows" y escribiendo "terminal" en el buscador que aparece.
+                <br>
+                Una vez en la terminal, nos aseguramos de que el sistema operativo este actualizado con los siguientes comandos:
+            </p>
+            <code>sudo apt upgrade && sudo apt update</code>
+            <img id="howto_2" src="resources/linux/Paso7.png" alt="Paso7Update">
+            <h1 id="paso4linux">4. Samba</h1>
+            <p>
+                Utilizaremos Samba para compartir archivos entre Linux y Windows. Para ello, instalamos Samba con el siguiente comando:
+            </p>
+            <code>sudo apt install samba</code>
+            <img id="howto_2" src="resources/linux/Paso8-1.png" alt="Paso8Samba">
+            <p>
+                Como todo programa que instalemos en Linux, nos pedira confirmacion para instalarlo. Simplemente escribimos "y" y se continuara la instalacion.
+            </p>
+            <img id="howto_2" src="resources/linux/Paso8-2.png" alt="Paso8Confirmacion">
+            <h1 id="paso5linux">5. Creacion de usuario</h1>
+        </div>
+    </div>
 </body>
 </html>
