@@ -33,6 +33,7 @@ a {
 
 /* Botones de navegacion */
 #header_a {
+    position: relative;
     background-color: grey;
     border: 2px solid rgb(112, 112, 112);
     border-radius: 20px;
@@ -157,4 +158,8 @@ code {
     padding: 5px;
     width: fit-content;
     font-weight: 600;
+}
+
+.code_li {
+    list-style-type: none;
 }
