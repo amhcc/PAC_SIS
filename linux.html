@@ -11,6 +11,7 @@
 </head>
 <body>
     <header>
+        <img class="icon_h" src="resources/ezgif-7-7f7fe5756a-removebg-preview.png" alt="logo">
         <nav class="header_nav">
             <a id="header_a" href="index.html">Inicio</a>
             <a id="header_a" href="virtualbox.html">Instalacion VirtualBox</a>
@@ -31,18 +32,20 @@
             </ul>
         </div>
         <div class="linux_cont">
+            <!--Paso 1-->
             <h1 id="paso1linux">1. Descarga del archivo .iso</h1>
             <p>
                 El primer paso para la instalacion de linux es la descarga del archivo .iso que sera utilizado
                 para la instalacion del mismo en VirtualBox. En este paso a paso utilizaremos la distribucion
-                de Linux Pop!_os. Para ello descargaremos el archivo del siguiente <a href="https://pop.system76.com/">enlace</a>. 
+                de Linux Pop!_os. Para ello descargaremos el archivo del siguiente <a href="https://pop.system76.com/" target="_blank">enlace</a>. 
                 Y seleccionaremos la primera opcion.
             </p>
-            <a id="howto_1" href="https://pop.system76.com/"><img id="howto_1" src="resources/linux/Paso1Descarga.png" alt="Paso1Descarga"></a>
-
+            <a id="howto_1" href="https://pop.system76.com/" target="_blank"><img id="howto_1" src="resources/linux/Paso1Descarga.png" alt="Paso1Descarga"></a>
+            
+            <!--Paso 2-->
             <h1 id="paso2linux">2. Creacion y configuracion en VirtualBox</h1>
             <p>
-                Despues de <a href="virtualbox.html">instalar VirtualBox</a> y realizar su configuracion inicial,
+                Despues de <a href="virtualbox.html" target="_blank">instalar VirtualBox</a> y realizar su configuracion inicial,
                 empezamos con la creacion de la maquina virtual. Tras abrir VirtualBox presionamos el boton "New".
             </p>
             <img id="howto_2" src="resources/linux/Paso2.png" alt="Paso2NuevaMaquina">
@@ -51,7 +54,7 @@
                 Aqui eligiremos el nombre de la maquina virtual, el archivo .iso, el nombre de usuario, el hardware que queremos que esta tenga y 
                 el espacio de disco duro que tendra la maquina virtual.
             </p>
-            <img id="howto_2" src="resources/linux/Paso3.png" alt="Paso3CreacionMaquina-1">
+            <img id="howto_1" src="resources/linux/Paso3.png" alt="Paso3CreacionMaquina-1">
             <p>
                 Como podemos observar se abre una ventana donde insertaremos el nombre de esta, puede ser cualquier nombre
                 que el usuario quiera insertar, y eligiremos nuestro archivo .iso que descargamos anteriormente.
@@ -63,14 +66,19 @@
             </p>
             <img id="howto_2" src="resources/linux/Paso5.png" alt="Paso5Hardware">
             <p>
-                Por ultimo, asignamos un espacio para el disco dura virtual de la maquina virtual. El minimo recomendado es 20GB.
+                Asignamos un espacio para el disco dura virtual de la maquina virtual. El minimo recomendado es 20GB.
             </p>
             <img id="howto_2" src="resources/linux/Paso6.png" alt="Paso6Disco">
-
+            <p>
+                Y por ultimo, asignamos al adaptador de red como red NAT, y seleccionamos el que se creo <a href="/virtualbox.html">anteriormente</a>.
+            </p>
+            <img id="howto_2" src="resources/windows/Paso6-5.png" alt="">
+            
+            <!--Paso 3-->
             <h1 id="paso3linux">3. Pop!_os</h1>
             <p>
                 Una vez instalada y configurada, realizamos la configuracion del sistema por defecto tal y como
-                se indica en el siguiente <a href="https://support.system76.com/articles/install-pop/">enlace</a>.
+                se indica en el siguiente <a href="https://support.system76.com/articles/install-pop/" target="_blank">enlace</a>.
                 Al entrar al sistema, abrimos una terminal. Esta se puede abrir presionando en el icono de la terminal,
                 o presionando la tecla "Windows" y escribiendo "terminal" en el buscador que aparece.
                 <br>
@@ -83,6 +91,7 @@
             </p>
             <img id="howto_2" src="resources/linux/Paso7-2.png" alt="Paso9Usuario">
 
+            <!--Paso 4-->
             <h1 id="paso4linux">4. Samba</h1>
             <p>
                 Utilizaremos Samba para compartir archivos entre Linux y Windows. Para ello, instalamos Samba con el siguiente comando:
@@ -95,6 +104,7 @@
             </p>
             <img id="howto_2" src="resources/linux/Paso8-2.png" alt="Paso8Confirmacion">
 
+            <!--Paso 5-->
             <h1 id="paso5linux">5. Creacion de su y nuevo usuario</h1>
             <p>
                 La primera parte de este paso es darle una contrasena a "su" o "superusuario". Esta es la cuenta con permisos de administrador del
@@ -115,6 +125,7 @@
             <code>adduser winuser</code>
             <img id="howto_2" src="resources/linux/Paso11NuevoUsuario.png" alt="Paso11NuevoUsuario">
 
+            <!--Paso 6-->
             <h1 id="#paso6linux">6. Creacion de directorio compartido</h1>
             <p>
                 Despues de haber creado el nuevo usuario, cambiaremos a este con el comando:
@@ -144,12 +155,15 @@
             </p>
             <code>chmod 777 compartida/</code>
             <p>
-                Ya que estamos en el directorio "winuser", vamos a aprovechar y vamos a crear un archivo dentro de este. Lo llamaremos "archivo-linux".
-                El comando que utilizaremos es:
+                Ya que estamos en el directorio "winuser", vamos a aprovechar y vamos a crear un archivo dentro de la carpeta "compartida". 
+                Lo llamaremos "archivo-linux" y los comandos que utilizaremos son:
             </p>
+            <code>cd compartida</code>
+            <br>
             <code>touch archivo-linux</code>
             <img id="howto_2" src="resources/linux/Paso14Permisos.png" alt="Paso14Permisos">
 
+            <!--Paso 7-->
             <h1 id="#paso7linux">7. Configuracion de Samba</h1>
             <p>
                 Samba es una implementacion de Windows SMB, lo utilizaremos para compartir el archivo que hemos creado con Windows.
@@ -179,7 +193,25 @@
             <p>
                 Guardamos este archivo con la combinacion de teclas "Ctrl + S" y salimos del archivo despues de haber guardado con la combinacion 
                 "Ctrl + X".
+                <br>
+                Una vez guardada esta configuracion, tenemos que asignarle a Samba el usuario "winuser" y una contrasena, para ello:
             </p>
+            <code>smbpasswd -a winuser</code>
+            <img id="howto_2" src="/resources/linux/Paso15SMBPass.png" alt="">
+            <p>
+                Por ultimo debemos reiniciar el proceso de Samba para que se apliquen todas las configuraciones. Utilizamos el comando:
+            </p>
+            <code>systemctl restart smbd.service</code>
+
+            <!--Paso 8-->
+            <h1>8. Direccion IP</h1>
+            <p>
+                El ultimo paso de este tutorial en Linux es recoger la direccion IP de esta maquina para, desde Windows, entrar a la carpeta
+                compartida. El siguiente comando nos ensena toda la informacion de red de esta maquina virtual, la direccion que necesitamos
+                es la subrayada que se puede ver en la siguiente imagen.
+            </p>
+            <code>ip a</code>
+            <img id="howto_2" src="/resources/linux/Paso16IP.png" alt="">
         </div>
     </div>
 </body>

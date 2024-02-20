@@ -136,7 +136,7 @@ a {
 
 /* Contenidos how-to */
 #howto_1 {
-    height: 350px;
+    height: 500px;
     width: 700px;
     justify-self: center;
     margin-top: 15px;
@@ -162,4 +162,10 @@ code {
 
 .code_li {
     list-style-type: none;
+}
+
+.icon_h {
+    transform: scaleX(-1);
+    width: 150px;
+    position: inherit;
 }
