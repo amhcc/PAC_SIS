@@ -11,6 +11,7 @@
 </head>
 <body>
     <header>
+        <img class="icon_h" src="resources/Header_logo.png" alt="logo">
         <nav class="header_nav">
             <a id="header_a" href="index.html">Inicio</a>
             <a id="header_a" href="virtualbox.html">Instalacion VirtualBox</a>
@@ -18,6 +19,41 @@
             <a id="header_a" href="windows.html">Instalacion Windows</a>
         </nav>
     </header>
+    <div class="main_cont">
+        <div class="index">
+            <h2>Contenidos</h2>
+            <ul>
+                <li><a href="#paso1linux">1. Descarga de VirtualBox</a></li>
+                <li><a href="#paso2linux">2. Instalacion y configuracion</a></li>
+            </ul>
+        </div>
+        <div class="linux_cont">
+            <!--Paso 1-->
+            <h1>1. Descarga de VirtualBox</h1>
+            <p>
+                Para descargar VirtualBox, nos dirigimo a su <a href="">pagina oficial</a> y en el apartado de descargas, descargamos
+                la versión correspondiente con el sistema que estemos utilizando.
+            </p>
+            <img id="howto_1" src="resources/virtualbox/Paso1.png" alt="">
 
+
+            <!--Paso 2-->
+            <h1>2. Instalacion y configuracion</h1>
+            <p>
+                VirtualBox se instala con sus configuraciones por defecto, tan solo dándole a "siguiente" cuando nos lo pide.
+                Una vez dentro de la aplicación nos dirigimos al menú de herramientas localizado en la página principal de la aplicación.
+            </p>
+            <img id="howto_2" src="/resources/virtualbox/Paso2.png" alt="">
+            <p>
+                Una vez dentro de este seleccionamos "network" o "red".
+            </p>
+            <img id="howto_2" src="/resources/virtualbox/Paso3.png" alt="">
+            <p>
+                Y una vez dentro de los ajustes de red nos dirigimos a "NAT networks" o "Redes NAT" y dentro de este creamos una red NAT con
+                los parámetros por defecto.
+            </p>
+            <img src="resources/virtualbox/Paso4.png" alt="">
+        </div>
+    </div>
 </body>
 </html>

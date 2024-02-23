@@ -1,13 +1,13 @@
 body {
+    background-color: #EFE5DC;
     margin: 0px;
 }
 
 header {
-    background-color: antiquewhite;
+    background-color: #283044;
     position: fixed;
     height: 10%;
     width: 100%;
-    border: 2px solid grey;
     z-index: 1000; /* Define el nivel de profundidad del objeto */
 }
 
@@ -34,10 +34,10 @@ a {
 /* Botones de navegacion */
 #header_a {
     position: relative;
-    background-color: grey;
-    border: 2px solid rgb(112, 112, 112);
+    background-color: #78A1BB;
+    box-shadow: 2px 2px 10px #000000;
     border-radius: 20px;
-    color: antiquewhite;
+    color: #EBF5EE;
     text-decoration: none;
     padding: 10px;
 }
@@ -71,7 +71,6 @@ a {
     z-index: 0; /* Define el nivel de profundidad del objeto */
 }
 
-
 #images_img {
     height: 250px;
     width: 250px;
@@ -93,8 +92,10 @@ a {
 }
 
 .contents1 {
-    background-color: antiquewhite;
+    background-color: #e2e2e2;
+    box-shadow: 2px 2px 10px #283044;
     position: relative;
+    width: 75%;
     grid-row: 1;
     grid-column: 2;
     margin-right: 5%;
@@ -103,8 +104,10 @@ a {
     border-radius: 15px;
 }
 .contents2 {
-    background-color: antiquewhite;
+    background-color: #e2e2e2;
+    box-shadow: 2px 2px 10px #283044;
     position: relative;
+    width: 75%;
     grid-row: 2;
     grid-column: 2;
     margin-right: 5%;
@@ -113,8 +116,10 @@ a {
     border-radius: 15px;
 }
 .contents3 {
-    background-color: antiquewhite;
+    background-color: #e2e2e2;
+    box-shadow: 2px 2px 10px #283044;
     position: relative;
+    width: 75%;
     grid-row: 3;
     grid-column: 2;
     margin-right: 5%;
@@ -130,6 +135,7 @@ a {
 
 .linux_cont {
     position: absolute;
+    width: auto;
     left: 300px;
     justify-content: center;
 }
@@ -141,20 +147,21 @@ a {
     justify-self: center;
     margin-top: 15px;
     margin-bottom: 15px;
+    box-shadow: 2px 2px 10px #000000;
 }
 
 #howto_2 {
     margin-top: 15px;
     margin-bottom: 15px;
     justify-self: center;
+    box-shadow: 2px 2px 10px #000000;
 }
 
 code {
-    color: antiquewhite;
+    color: #EBF5EE;
     display: block;
-    background-color: grey;
+    background-color: #78A1BB;
     border: 1px solid black;
-    border-radius: 5px;
     padding: 5px;
     width: fit-content;
     font-weight: 600;

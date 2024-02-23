@@ -11,6 +11,7 @@
 </head>
 <body>
     <header>
+        <img class="icon_h" src="resources/Header_logo.png" alt="logo">
         <nav class="header_nav">
             <a id="header_a" href="index.html">Inicio</a>
             <a id="header_a" href="virtualbox.html">Instalacion VirtualBox</a>
@@ -23,39 +24,40 @@
         <div class="index">
             <h2>Contenidos</h2>
             <ul>
-                <li><a href="#paso1linux">1. Descarga del archivo .iso</a></li>
-                <li><a href="#paso2linux">2. Creacion y configuracion en VirtualBox</a></li>
-                <li><a href="#paso3linux">3. Windows 10</a></li>
-                <li><a href="#paso4linux">4. Ping</a></li>
-                <li><a href="#paso5linux">5. Comprobacion</a></li>
-                <li><a href="">6. Carpeta "compartida"</a></li>
+                <li><a href="#paso1windows">1. Descarga del archivo .iso</a></li>
+                <li><a href="#paso2windows">2. Creación y configuración en VirtualBox</a></li>
+                <li><a href="#paso3windows">3. Windows 10</a></li>
+                <li><a href="#paso4windows">4. Ping</a></li>
+                <li><a href="#paso5windows">5. Comprobación</a></li>
+                <li><a href="#paso6windows">6. Carpeta "compartida"</a></li>
             </ul>
         </div>
         <div class="linux_cont">
             <!--Paso 1-->
-            <h1>1. Descarga del archivo .iso</h1>
+            <h1 id="paso1windows">1. Descarga del archivo .iso</h1>
             <p>
-                Al igual que con Linux, necesitamos un archivo .iso para la instalacion del sistema operativo en la maquina virtual.
-                En el caso de Windows 10, necesitamos descargarnos un instalador en el cual nos dara la opcion a instalarlo en el sistema o 
-                descargarlo en un directorio que le indiquemos. Para descargarnos esta herramienta podemos hacerlo desde este 
+                Al igual que con Linux, necesitamos un archivo .iso para la instalación del sistema operativo en la máquina virtual.
+                En el caso de Windows 10, necesitamos descargarnos un instalador en el cual nos dara la opcion a instalarlo en el sistema o
+                descargarlo en un directorio que le indiquemos. Para descargarnos esta herramienta podemos hacerlo desde este
                 <a href="https://www.microsoft.com/es-es/software-download/windows10" target="_blank">enlace</a>.
             </p>
-            <a href="https://www.microsoft.com/es-es/software-download/windows10" target="_blank"><img id="howto_1" src="resources/windows/Paso1iso.png" alt=""></a>
+            <a href="https://www.microsoft.com/es-es/software-download/windows10" target="_blank"><img id="howto_1" src="resources/windows/Paso1iso.png" alt="Descarga iso"></a>
             <p>
-                En esta herramienta que nos proporciona Microsoft, aceptamos las condiciones y seleccionamos la opcion para instalar Windows
-                en un USB. Este nos permitira descargar el archivo .iso en un directorio de nuestra eleccion.
+                En esta herramienta que nos proporciona Microsoft, aceptamos las condiciones y seleccionamos la opción para instalar Windows
+                en un USB. Este nos permitirá descargar el archivo .iso en un directorio de nuestra elección.
             </p>
-            <img id="howto_2" src="/resources/windows/Paso1-5.png" alt="">
+            <img id="howto_2" src="/resources/windows/Paso1-5.png" alt="P">
             <p>
-                Seguimos con la instalacion y utilizamos los ajustes recomendados hasta llegar a la siguiente seleccion de opciones, en esta elegimos
+                Seguimos con la instalación y utilizamos los ajustes recomendados hasta llegar a la siguiente selección de opciones, en esta elegimos
                 archivo ISO y elegimos donde va a ser descargado el archivo.
             </p>
             <img id="howto_2" src="/resources/windows/Paso1-10.png" alt="">
 
+
             <!--Paso 2-->
-            <h1>2. Creacion y configuracion en VirtualBox</h1>
+            <h1 id="paso2windows">2. Creación y configuración en VirtualBox</h1>
             <p>
-                Igual que con <a href="/linux.html">Linux</a>, creamos una nueva maquina virtual y realizamos la configuracion de esta, esta vez con el archivo .iso
+                Igual que con <a href="/linux.html">Linux</a>, creamos una nueva máquina virtual y realizamos la configuración de esta, esta vez con el archivo .iso
                 de Windows.
             </p>
             <img id="howto_2" src="resources/linux/Paso2.png" alt="">
@@ -64,88 +66,91 @@
             </p>
             <img id="howto_2" src="resources/windows/Paso3.png" alt="">
             <p>
-                Opcionalmente podemos cambiarle el nombre de usuario y la contrasena que vienen por defecto. Tambien podemos asignarle una clave
-                de activacion generica para poder utilizar el sistema sin problemas. En la siguiente <a href="https://www.tenforums.com/tutorials/95922-generic-product-keys-install-windows-10-editions.html" target="_blank">pagina</a>
-                podemos encontrar varias de ellas dependiendo de la version de Windows que instalemos. Utilizamos las claves (retail).
+                Opcionalmente podemos cambiarle el nombre de usuario y la contraseña que vienen por defecto. También podemos asignarle una clave
+                de activación genérica para poder utilizar el sistema sin problemas. En la siguiente <a href="https://www.tenforums.com/tutorials/95922-generic-product-keys-install-windows-10-editions.html" target="_blank">pagina</a>
+                podemos encontrar varias de ellas dependiendo de la versión de Windows que instalemos. Utilizamos las claves (retail).
             </p>
             <img id="howto_2" src="resources/windows/Paso4GenericKey.png" alt="">
             <p>
-                Asignamos el hardware a la maquina virtual. El minimo que podemos asignarle de memoria RAM es 2GB, y 2 nucleos pero le asignamos
-                algo mas para que el sistema no vaya lento.
+                Asignamos el hardware a la máquina virtual. El minimo que podemos asignarle de memoria RAM es 2GB, y 2 nucleos pero le asignamos
+                algo más para que el sistema no vaya lento.
             </p>
             <img id="howto_2" src="resources/windows/Paso5.png" alt="">
             <p>
-                Asignamos el espacio del disco duro virtual. El minimo que se recomienda para Windows es 20GB.
+                Asignamos el espacio del disco duro virtual. El mínimo que se recomienda para Windows es 20GB.
             </p>
             <img id="howto_2" src="resources/windows/Paso6.png" alt="">
             <p>
-                Y por ultimo, asignamos al adaptador de red como red NAT, y seleccionamos el que se creo <a href="/virtualbox.html">anteriormente</a>.
+                Y por último, asignamos al adaptador de red como red NAT, y seleccionamos el que se creó <a href="/virtualbox.html">anteriormente</a>.
             </p>
             <img id="howto_2" src="resources/windows/Paso6-5.png" alt="">
 
+
             <!--Paso 3-->
-            <h1>3. Windows 10</h1>
+            <h1 id="paso3windows">3. Windows 10</h1>
             <p>
-                Una vez creada la maquina virtual, la arrancamos y dejamos que se instale, esto puede tardar varios minutos. Al terminar se reiniciara
-                y una vez entremos en el sistema iremos a Windows Update, donde se descargaran las actualizaciones que haya disponible. Y una vez
-                descargada reiniciaremos la maquina virtual.
+                Una vez creada la máquina virtual, la arrancamos y dejamos que se instale, esto puede tardar varios minutos. Al terminar se reiniciará
+                y una vez entremos en el sistema iremos a Windows Update, donde se descargan las actualizaciones que haya disponible. Y una vez
+                descargada reiniciamos la máquina virtual.
             </p>
-            <img src="resources/windows/Paso11.png" alt="">
+            <img id="howto_2" src="resources/windows/Paso11.png" alt="">
             <img id="howto_1" src="resources/windows/Paso11DownloadandInstallUpdates.png" alt="">
-        
+       
             <!--Paso 4-->
-            <h1>4. Configuracion de Windows</h1>
+            <h1 id="paso4windows">4. Configuración de Windows</h1>
             <p>
-                El siguiente paso consiste en activar las opciones para compartir archivos a traves de la red en Windows.
-                Para ello vamos buscamos "advanced sharing" o "uso compartido avanzado". Y activamos las dos opciones que aparecen.
+                El siguiente paso consiste en activar las opciones para compartir archivos a través de la red en Windows.
+                Para ello vamos a buscar "advanced sharing" o "uso compartido avanzado". Y activamos las dos opciones que aparecen.
             </p>
             <img id="howto_2" src="resources/windows/Paso12.png" alt="">
             <img id="howto_2" src="resources/windows/Paso13.png" alt="">
             <p>
-                Una vez esten estas dos opciones activadas, nos dirigimos al firewall de Windows. Buscamos "windows defender" o "firewall" y hacemos
+                Una vez estén estas dos opciones activadas, nos dirigimos al firewall de Windows. Buscamos "windows defender" o "firewall" y hacemos
                 click en este.
             </p>
             <img id="howto_2" src="resources/windows/Paso14.png" alt="">
             <img id="howto_2" src="resources/windows/Paso145.png" alt="">
             <p>
                 Una vez entremos en las opciones avanzadas, nos dirigimos a "reglas de entrada" o "inbound rules" y activamos las opciones indicadas
-                en la siguiente imagen, "Archivos e impresoras compartidos" o "File and Printer Sharing", estas son las reglas que permitiran 
+                en la siguiente imagen, "Archivos e impresoras compartidos" o "File and Printer Sharing", estas son las reglas que permitirán
                 el acceso a la carpeta compartida. Vamos a activarlas todas aunque solo se va a hacer uso de las reglas (SMB-In).
             </p>
             <img id="howto_2" src="resources/windows/Paso146.png" alt="">
 
+
             <!--Paso 5-->
-            <h1>5. Ping</h1>
+            <h1 id="paso5windows">5. Ping</h1>
             <p>
-                En este paso tan solo vamos a comprobar, con las dos maquinas virtuales encendidas al mismo tiempo, que estas maquinas se 
-                comunican entre ellas. Si se ha seguido todo paso a paso deberiamos obtener el siguiente resultado.
+                En este paso tan solo vamos a comprobar, con las dos máquinas virtuales encendidas al mismo tiempo, que estas máquinas se
+                comunican entre ellas. Si se ha seguido todo paso a paso deberíamos obtener el siguiente resultado.
                 <br>
                 Buscamos "cmd" en el buscador de Windows.
             </p>
             <img id="howto_2" src="resources/windows/Paso148.png" alt="">
             <p>
-                Una vez entremos en este utilizaremos el siguiente comando con la direccion IP que obtuvimos <a href="linux.html">anteriormente</a>.
+                Una vez entremos en este utilizaremos el siguiente comando con la dirección IP que obtuvimos <a href="linux.html">anteriormente</a>.
             </p>
             <code>ping 10.0.2.4</code>
             <img id="howto_2" src="resources/windows/Paso149.png" alt="">
             <p>
-                Como se puede observar las maquinas se comunican entre ellas y con esto pasamos al ultimo paso en el cual vamos a acceder a
+                Como se puede observar las máquinas se comunican entre ellas y con esto pasamos al último paso en el cual vamos a acceder a
                 la carpeta compartida.
             </p>
 
+
             <!--Paso 6-->
-            <h1>6. Carpeta "compartida"</h1>
+            <h1 id="paso6windows">6. Carpeta "compartida"</h1>
             <p>
-                En este ultimo paso nos conectaremos a la direccion IP de nuestra maquina de Linux a traves de Windows. Para ello en el buscador
-                ponemos "run" o "ejecutar" y aqui introducimos la direccion IP de la siguiente manera:
+                En este último paso nos conectaremos a la dirección IP de nuestra máquina de Linux a través de Windows. Para ello en el buscador
+                ponemos "run" o "ejecutar" y aquí introducimos la dirección IP de la siguiente manera:
             </p>
             <code>\\10.0.2.4\compartida</code>
             <p>
-                Una vez introducimos esto, nos pedira un usuario y contrasena que seran los que creamos previamente en el tutorial de Linux.
+                Una vez introducimos esto, nos pedirá un usuario y contraseña que serán los que creamos previamente en el tutorial de Linux.
             </p>
             <img id="howto_2" src="resources/windows/Paso155.png" alt="">
             <p>
-                Y si todo ha salido correctamente y el usuario y contrasena son correctos, podremos ver nuestro "archivo-linux" desde Windows.
+                Y si todo ha salido correctamente y el usuario y contraseña son correctos, podremos ver nuestro "archivo-linux" desde Windows.
             </p>
             <img id="howto_2" src="resources/windows/Paso534.png" alt="">
         </div> 
