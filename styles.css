@@ -17,7 +17,7 @@ a {
 
 /* Boton volver arriba */
 .up {
-    position: fixed;
+    position: sticky;
     color: #283044;
     font-weight: bold;
     font-size: 50px;
@@ -135,11 +135,11 @@ a {
     height: 100vh;
     top: 0;
     left: 0;
-    padding-top: 100px;
+    padding-top: 25px;
     padding-left: 15px;
     padding-right: 15px;
     color: #EBF5EE;
-    position: fixed;
+    position: sticky;
     width: 250px;
     z-index: 0;
     font-family: "Inter", sans-serif;
@@ -155,18 +155,22 @@ a {
     color: #EBF5EE;
 }
 
+#index h2 {
+    margin-top: 0;
+}
 /* Contenidos how-to */
 main {
-    position: relative;
-    width: auto;
-    left: 300px;
-    justify-content: center;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 450;
     font-style: normal;
     font-variation-settings:
       "slnt" 0;
+    position: relative;
+    width: 80%;
+    height: auto;
+    top: 0;
+    left: 300px;
 }
 
 /* Estilos imagenes how-to */
@@ -211,6 +215,12 @@ code {
 
 footer {
     background-color: #283044;
-    height: 75px;
-    width: 100%;
+    color: #EBF5EE;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    height: 50px;
+    align-items: center;
+    padding: 5px;
 }
