@@ -15,6 +15,10 @@ a {
     text-decoration: none;
 }
 
+.principal {
+    display: flex;
+}
+
 /* Boton volver arriba */
 .up {
     position: sticky;
@@ -24,7 +28,7 @@ a {
     height: 30px;
     width: 30px;
     left: 95%;
-    top: 93%;
+    top: 90%;
     border-radius: 20px;
     text-align: center;
 }
@@ -130,7 +134,7 @@ a {
 }
 
 /* Indice contenidos */
-#index {
+.index_nav {
     background-color: #283044;
     height: 100vh;
     top: 0;
@@ -151,11 +155,11 @@ a {
 }
 
 /* Enlaces del indice de contenidos */
-#index a {
+.index_nav a {
     color: #EBF5EE;
 }
 
-#index h2 {
+.index_nav h2 {
     margin-top: 0;
 }
 /* Contenidos how-to */
@@ -167,10 +171,11 @@ main {
     font-variation-settings:
       "slnt" 0;
     position: relative;
-    width: 80%;
+    display: inline-block;
+    width: 60%;
     height: auto;
     top: 0;
-    left: 300px;
+    left: 25px;
 }
 
 /* Estilos imagenes how-to */
@@ -222,5 +227,5 @@ footer {
     gap: 50px;
     height: 50px;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
 }
