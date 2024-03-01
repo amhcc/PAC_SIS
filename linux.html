@@ -19,208 +19,209 @@
             <a id="header_a" href="windows.html">Instalacion Windows</a>
         </nav>
     </header>
-    <div class="main_cont">
-        <div class="index">
-            <h2>Contenidos</h2>
-            <ul>
-                <li><a href="#paso1linux">1. Descarga del archivo .iso</a></li>
-                <li><a href="#paso2linux">2. Creación y configuración en VirtualBox</a></li>
-                <li><a href="#paso3linux">3. Pop!_os</a></li>
-                <li><a href="#paso4linux">4. Samba</a></li>
-                <li><a href="#paso5linux">5. Creación de usuario</a></li>
-                <li><a href="#paso6linux">6. Creación de directorio compartido</a></li>
-                <li><a href="#paso7linux">7. Configuración de Samba</a></li>
-                <li><a href="#paso8linux">8. Dirección IP</a></li>
-            </ul>
-        </div>
-        <div class="contenidos">
-            <a href="#icon_h" class="up">^</a>
-            <!--Paso 1-->
-            <h1 id="paso1linux">1. Descarga del archivo .iso</h1>
-            <p>
-                El primer paso para la instalación de linux es la descarga del archivo .iso que será utilizado
-                para la instalación del mismo en VirtualBox. En este paso a paso utilizaremos la distribución
-                de Linux Pop!_os. Para ello descargaremos el archivo del siguiente <a href="https://pop.system76.com/" target="_blank">enlace</a>.
-                Y seleccionaremos la primera opción.
-            </p>
-            <a href="https://pop.system76.com/" target="_blank"><img id="howto_1" src="resources/linux/Paso1Descarga.png" alt="Paso1Descarga"></a>
-           
-            <!--Paso 2-->
-            <h1 id="paso2linux">2. Creación y configuración en VirtualBox</h1>
-            <p>
-                Después de <a href="virtualbox.html" target="_blank">instalar VirtualBox</a> y realizar su configuración inicial,
-                empezamos con la creación de la máquina virtual. Tras abrir VirtualBox presionamos el botón "New".
-            </p>
-            <img id="howto_2" src="resources/linux/Paso2.png" alt="Paso2NuevaMaquina">
-            <p>
-                Tras presionar el botón "New", se abrirá una ventana para la configuración de esta, presionamos modo experto en la parte inferior.
-                Aquí elegiremos el nombre de la máquina virtual, el archivo .iso, el nombre de usuario, el hardware que queremos que esta tenga y
-                el espacio de disco duro que tendrá la máquina virtual.
-            </p>
-            <img id="howto_1" src="resources/linux/Paso3.png" alt="Paso3CreacionMaquina-1">
-            <p>
-                Como podemos observar se abre una ventana donde insertamos el nombre de esta, puede ser cualquier nombre
-                que el usuario quiera insertar, y elegimos nuestro archivo .iso que descargamos anteriormente.
-            </p>
-            <img id="howto_2" src="resources/linux/Paso4.png" alt="Paso4.iso">
-            <p>
-                En el siguiente paso le asignaremos memoria RAM y una cantidad de CPUs a la máquina virtual.
-                Le asignaremos 4GB de memoria RAM y 4 CPUs ya que estos son los requisitos mínimos recomendables para este sistema.
-            </p>
-            <img id="howto_2" src="resources/linux/Paso5.png" alt="Paso5Hardware">
-            <p>
-                Asignamos un espacio para el disco duro virtual de la máquina virtual. El mínimo recomendado es 20GB.
-            </p>
-            <img id="howto_2" src="resources/linux/Paso6.png" alt="Paso6Disco">
-            <p>
-                Y por último, asignamos al adaptador de red como red NAT, y seleccionamos el que se creó <a href="/virtualbox.html">anteriormente</a>.
-            </p>
-            <img id="howto_2" src="resources/windows/Paso6-5.png" alt="">
-           
-            <!--Paso 3-->
-            <h1 id="paso3linux">3. Pop!_os</h1>
-            <p>
-                Una vez instalada y configurada, realizamos la configuración del sistema por defecto tal y como
-                se indica en el siguiente <a href="https://support.system76.com/articles/install-pop/" target="_blank">enlace</a>.
-                Al entrar al sistema, abrimos una terminal. Esta se puede abrir presionando en el icono de la terminal,
-                o presionando la tecla "Windows" y escribiendo "terminal" en el buscador que aparece.
-                <br>
-                Una vez en la terminal, nos aseguramos de que el sistema operativo esté actualizado con los siguientes comandos:
-            </p>
-            <code>sudo apt upgrade && sudo apt update</code>
-            <img id="howto_2" src="resources/linux/Paso7-1.png" alt="Paso7Update">
-            <p>
-                Escribimos "y" cuando se pida confirmación para instalar las actualizaciones.
-            </p>
-            <img id="howto_2" src="resources/linux/Paso7-2.png" alt="Paso9Usuario">
-
-
-            <!--Paso 4-->
-            <h1 id="paso4linux">4. Samba</h1>
-            <p>
-                Utilizaremos Samba para compartir archivos entre Linux y Windows. Para ello, instalamos Samba con el siguiente comando:
-            </p>
-            <code>sudo apt install samba</code>
-            <img id="howto_2" src="resources/linux/Paso8-1.png" alt="Paso8Samba">
-            <p>
-                Como todo programa que instalemos en Linux, nos pedirá confirmación para instalarlo. Simplemente escribimos "y" y se continuará la
-                instalación.
-            </p>
-            <img id="howto_2" src="resources/linux/Paso8-2.png" alt="Paso8Confirmacion">
-
-
-            <!--Paso 5-->
-            <h1 id="paso5linux">5. Creación de su y nuevo usuario</h1>
-            <p>
-                La primera parte de este paso es darle una contraseña a "su" o "superusuario". Esta es la cuenta con permisos de administrador del
-                sistema. Con este crearemos usuarios y podremos cambiar configuraciones del sistema. El comando que vamos a utilizar es el siguiente:
-            </p>
-            <code id="supasswd">sudo passwd root</code>
-            <img id="howto_2" src="resources/linux/Paso9su.png" alt="Paso9su">
-            <p>
-                Después de asignarle una contraseña a su, accederemos a este con la contraseña que hemos asignado antes, con el comando:
-            </p>
-            <code>su</code>
-            <img id="howto_2" src="resources/linux/Paso10su2.png" alt="Paso10su">
-            <p>
-                Una vez en este, creamos el nuevo usuario y lo llamaremos "winuser". Le asignaremos una contraseña cuando nos la pida y dejaremos
-                en blanco el resto de información que nos pida, tan solo presionamos la tecla Enter para continuar hasta que el usuario se cree.
-                El comando para crear un usuario es el siguiente:
-            </p>
-            <code>adduser winuser</code>
-            <img id="howto_2" src="resources/linux/Paso11NuevoUsuario.png" alt="Paso11NuevoUsuario">
-
-
-            <!--Paso 6-->
-            <h1 id="paso6linux">6. Creación de directorio compartido</h1>
-            <p>
-                Después de haber creado el nuevo usuario, cambiaremos a este con el comando:
-            </p>
-            <code>su winuser</code>
-            <img id="howto_2" src="resources/linux/Paso12winuser.png" alt="Paso12winuser">
-            <p>
-                Una vez en este, vamos a crear la carpeta y entramos en esta. Para ello necesitamos salir del directorio actual "/home/linuxuser",
-                y nos dirigiremos a "/home/winuser". El primer comando que utilizaremos es el siguiente y sirve para salir del directorio actual:
-            </p>
-            <code>cd ..</code>
-            <p>
-                El siguiente que utilizaremos entrará en el directorio indicado:
-            </p>
-            <code>cd winuser</code>
-            <img id="howto_2" src="resources/linux/Paso13Directorios.png" alt="Paso13">
-            <p>
-                Una vez entremos en el directorio "winuser" crearemos una carpeta llamada "compartida". El comando que vamos a utilizar es el
-                siguiente:
-            </p>
-            <code>mkdir compartida</code>
-            <p>
-                Tras crear esta carpeta, necesitamos asignarle permisos para poder acceder a esta carpeta desde Windows. En Linux los permisos
-                se asignan a través de números. En este caso le asignamos todos los permisos a todos los usuarios, el número será 777.
-                Utilizamos el siguiente comando, con una "/" al final de la carpeta, ya que puede haber un archivo llamado "compartida" lo que puede
-                causar problemas, para ello:
-            </p>
-            <code>chmod 777 compartida/</code>
-            <p>
-                Ya que estamos en el directorio "winuser", vamos a aprovechar y vamos a crear un archivo dentro de la carpeta "compartida".
-                Lo llamaremos "archivo-linux" y los comandos que utilizaremos son:
-            </p>
-            <code>cd compartida</code>
+    <nav id="index">
+        <h2>Contenidos</h2>
+        <ul>
+            <li><a href="#paso1linux">1. Descarga del archivo .iso</a></li>
+            <li><a href="#paso2linux">2. Creación y configuración en VirtualBox</a></li>
+            <li><a href="#paso3linux">3. Pop!_os</a></li>
+            <li><a href="#paso4linux">4. Samba</a></li>
+            <li><a href="#paso5linux">5. Creación de usuario</a></li>
+            <li><a href="#paso6linux">6. Creación de directorio compartido</a></li>
+            <li><a href="#paso7linux">7. Configuración de Samba</a></li>
+            <li><a href="#paso8linux">8. Dirección IP</a></li>
+        </ul>
+    </nav>
+    <main>
+        <a href="#icon_h" class="up">^</a>
+        <!--Paso 1-->
+        <h1 id="paso1linux">1. Descarga del archivo .iso</h1>
+        <p>
+            El primer paso para la instalación de linux es la descarga del archivo .iso que será utilizado
+            para la instalación del mismo en VirtualBox. En este paso a paso utilizaremos la distribución
+            de Linux Pop!_os. Para ello descargaremos el archivo del siguiente <a href="https://pop.system76.com/" target="_blank">enlace</a>.
+            Y seleccionaremos la primera opción.
+        </p>
+        <a href="https://pop.system76.com/" target="_blank"><img id="howto_1" src="resources/linux/Paso1Descarga.png" alt="Paso1Descarga"></a>
+        
+        <!--Paso 2-->
+        <h1 id="paso2linux">2. Creación y configuración en VirtualBox</h1>
+        <p>
+            Después de <a href="virtualbox.html" target="_blank">instalar VirtualBox</a> y realizar su configuración inicial,
+            empezamos con la creación de la máquina virtual. Tras abrir VirtualBox presionamos el botón "New".
+        </p>
+        <img id="howto_2" src="resources/linux/Paso2.png" alt="Paso2NuevaMaquina">
+        <p>
+            Tras presionar el botón "New", se abrirá una ventana para la configuración de esta, presionamos modo experto en la parte inferior.
+            Aquí elegiremos el nombre de la máquina virtual, el archivo .iso, el nombre de usuario, el hardware que queremos que esta tenga y
+            el espacio de disco duro que tendrá la máquina virtual.
+        </p>
+        <img id="howto_1" src="resources/linux/Paso3.png" alt="Paso3CreacionMaquina-1">
+        <p>
+            Como podemos observar se abre una ventana donde insertamos el nombre de esta, puede ser cualquier nombre
+            que el usuario quiera insertar, y elegimos nuestro archivo .iso que descargamos anteriormente.
+        </p>
+        <img id="howto_2" src="resources/linux/Paso4.png" alt="Paso4.iso">
+        <p>
+            En el siguiente paso le asignaremos memoria RAM y una cantidad de CPUs a la máquina virtual.
+            Le asignaremos 4GB de memoria RAM y 4 CPUs ya que estos son los requisitos mínimos recomendables para este sistema.
+        </p>
+        <img id="howto_2" src="resources/linux/Paso5.png" alt="Paso5Hardware">
+        <p>
+            Asignamos un espacio para el disco duro virtual de la máquina virtual. El mínimo recomendado es 20GB.
+        </p>
+        <img id="howto_2" src="resources/linux/Paso6.png" alt="Paso6Disco">
+        <p>
+            Y por último, asignamos al adaptador de red como red NAT, y seleccionamos el que se creó <a href="/virtualbox.html">anteriormente</a>.
+        </p>
+        <img id="howto_2" src="resources/windows/Paso6-5.png" alt="">
+        
+        <!--Paso 3-->
+        <h1 id="paso3linux">3. Pop!_os</h1>
+        <p>
+            Una vez instalada y configurada, realizamos la configuración del sistema por defecto tal y como
+            se indica en el siguiente <a href="https://support.system76.com/articles/install-pop/" target="_blank">enlace</a>.
+            Al entrar al sistema, abrimos una terminal. Esta se puede abrir presionando en el icono de la terminal,
+            o presionando la tecla "Windows" y escribiendo "terminal" en el buscador que aparece.
             <br>
-            <code>touch archivo-linux</code>
-            <img id="howto_2" src="resources/linux/Paso14Permisos.png" alt="Paso14Permisos">
+            Una vez en la terminal, nos aseguramos de que el sistema operativo esté actualizado con los siguientes comandos:
+        </p>
+        <code>sudo apt upgrade && sudo apt update</code>
+        <img id="howto_2" src="resources/linux/Paso7-1.png" alt="Paso7Update">
+        <p>
+            Escribimos "y" cuando se pida confirmación para instalar las actualizaciones.
+        </p>
+        <img id="howto_2" src="resources/linux/Paso7-2.png" alt="Paso9Usuario">
 
 
-            <!--Paso 7-->
-            <h1 id="paso7linux">7. Configuración de Samba</h1>
-            <p>
-                Samba es una implementación de Windows SMB, lo utilizaremos para compartir el archivo que hemos creado con Windows.
-                Para poder utilizar este, necesitamos añadir nuestra carpeta creada, junto con unos atributos que veremos siguientemente.
-                Para hacer esto utilizaremos "nano" que es un editor de texto que viene incluido con Pop!_os. Utilizamos el siguiente comando
-                para acceder a la cuenta administradora de Linux con la <a href="#supasswd">contraseña que creamos anteriormente</a>:
-            </p>
-            <code>su</code>
-            <p>
-                Y una vez dentro de este, utilizamos:
-            </p>
-            <code>nano /etc/samba/smb.conf</code>
-            <p>
-                Una vez dentro del archivo, nos dirigimos al final de este con la rueda del ratón o con la tecla de "Page Down". Introducimos lo
-                siguiente:
-            </p>
-            <code>
-                [compartida]
-                <ul class="code_li">
-                    <li>path = /home/winuser/compartida</li>
-                    <li>browseable = yes</li>
-                    <li>read only = no</li>
-                    <li>valid users = winuser</li>
-                </ul>
-            </code>
-            <img id="howto_2" src="resources/linux/Paso15nano.png" alt="">
-            <p>
-                Guardamos este archivo con la combinación de teclas "Ctrl + S" y salimos del archivo después de haber guardado con la combinación
-                "Ctrl + X".
-                <br>
-                Una vez guardada esta configuración, tenemos que asignarle a Samba el usuario "winuser" y una contraseña, para ello:
-            </p>
-            <code>smbpasswd -a winuser</code>
-            <img id="howto_2" src="/resources/linux/Paso15SMBPass.png" alt="">
-            <p>
-                Por último debemos reiniciar el proceso de Samba para que se apliquen todas las configuraciones. Utilizamos el comando:
-            </p>
-            <code>systemctl restart smbd.service</code>
+        <!--Paso 4-->
+        <h1 id="paso4linux">4. Samba</h1>
+        <p>
+            Utilizaremos Samba para compartir archivos entre Linux y Windows. Para ello, instalamos Samba con el siguiente comando:
+        </p>
+        <code>sudo apt install samba</code>
+        <img id="howto_2" src="resources/linux/Paso8-1.png" alt="Paso8Samba">
+        <p>
+            Como todo programa que instalemos en Linux, nos pedirá confirmación para instalarlo. Simplemente escribimos "y" y se continuará la
+            instalación.
+        </p>
+        <img id="howto_2" src="resources/linux/Paso8-2.png" alt="Paso8Confirmacion">
 
 
-            <!--Paso 8-->
-            <h1 id="paso8linux">8. Dirección IP</h1>
-            <p>
-                El último paso de este tutorial en Linux es recoger la dirección IP de esta máquina para, desde Windows, entrar a la carpeta
-                compartida. El siguiente comando nos enseña toda la información de red de esta máquina virtual, la dirección que necesitamos
-                es la subrayada que se puede ver en la siguiente imagen.
-            </p>
-            <code>ip a</code>
-            <img id="howto_2" src="/resources/linux/Paso16IP.png" alt="">
-        </div>
-    </div>
+        <!--Paso 5-->
+        <h1 id="paso5linux">5. Creación de su y nuevo usuario</h1>
+        <p>
+            La primera parte de este paso es darle una contraseña a "su" o "superusuario". Esta es la cuenta con permisos de administrador del
+            sistema. Con este crearemos usuarios y podremos cambiar configuraciones del sistema. El comando que vamos a utilizar es el siguiente:
+        </p>
+        <code id="supasswd">sudo passwd root</code>
+        <img id="howto_2" src="resources/linux/Paso9su.png" alt="Paso9su">
+        <p>
+            Después de asignarle una contraseña a su, accederemos a este con la contraseña que hemos asignado antes, con el comando:
+        </p>
+        <code>su</code>
+        <img id="howto_2" src="resources/linux/Paso10su2.png" alt="Paso10su">
+        <p>
+            Una vez en este, creamos el nuevo usuario y lo llamaremos "winuser". Le asignaremos una contraseña cuando nos la pida y dejaremos
+            en blanco el resto de información que nos pida, tan solo presionamos la tecla Enter para continuar hasta que el usuario se cree.
+            El comando para crear un usuario es el siguiente:
+        </p>
+        <code>adduser winuser</code>
+        <img id="howto_2" src="resources/linux/Paso11NuevoUsuario.png" alt="Paso11NuevoUsuario">
+
+
+        <!--Paso 6-->
+        <h1 id="paso6linux">6. Creación de directorio compartido</h1>
+        <p>
+            Después de haber creado el nuevo usuario, cambiaremos a este con el comando:
+        </p>
+        <code>su winuser</code>
+        <img id="howto_2" src="resources/linux/Paso12winuser.png" alt="Paso12winuser">
+        <p>
+            Una vez en este, vamos a crear la carpeta y entramos en esta. Para ello necesitamos salir del directorio actual "/home/linuxuser",
+            y nos dirigiremos a "/home/winuser". El primer comando que utilizaremos es el siguiente y sirve para salir del directorio actual:
+        </p>
+        <code>cd ..</code>
+        <p>
+            El siguiente que utilizaremos entrará en el directorio indicado:
+        </p>
+        <code>cd winuser</code>
+        <img id="howto_2" src="resources/linux/Paso13Directorios.png" alt="Paso13">
+        <p>
+            Una vez entremos en el directorio "winuser" crearemos una carpeta llamada "compartida". El comando que vamos a utilizar es el
+            siguiente:
+        </p>
+        <code>mkdir compartida</code>
+        <p>
+            Tras crear esta carpeta, necesitamos asignarle permisos para poder acceder a esta carpeta desde Windows. En Linux los permisos
+            se asignan a través de números. En este caso le asignamos todos los permisos a todos los usuarios, el número será 777.
+            Utilizamos el siguiente comando, con una "/" al final de la carpeta, ya que puede haber un archivo llamado "compartida" lo que puede
+            causar problemas, para ello:
+        </p>
+        <code>chmod 777 compartida/</code>
+        <p>
+            Ya que estamos en el directorio "winuser", vamos a aprovechar y vamos a crear un archivo dentro de la carpeta "compartida".
+            Lo llamaremos "archivo-linux" y los comandos que utilizaremos son:
+        </p>
+        <code>cd compartida</code>
+        <br>
+        <code>touch archivo-linux</code>
+        <img id="howto_2" src="resources/linux/Paso14Permisos.png" alt="Paso14Permisos">
+
+
+        <!--Paso 7-->
+        <h1 id="paso7linux">7. Configuración de Samba</h1>
+        <p>
+            Samba es una implementación de Windows SMB, lo utilizaremos para compartir el archivo que hemos creado con Windows.
+            Para poder utilizar este, necesitamos añadir nuestra carpeta creada, junto con unos atributos que veremos siguientemente.
+            Para hacer esto utilizaremos "nano" que es un editor de texto que viene incluido con Pop!_os. Utilizamos el siguiente comando
+            para acceder a la cuenta administradora de Linux con la <a href="#supasswd">contraseña que creamos anteriormente</a>:
+        </p>
+        <code>su</code>
+        <p>
+            Y una vez dentro de este, utilizamos:
+        </p>
+        <code>nano /etc/samba/smb.conf</code>
+        <p>
+            Una vez dentro del archivo, nos dirigimos al final de este con la rueda del ratón o con la tecla de "Page Down". Introducimos lo
+            siguiente:
+        </p>
+        <code>
+            [compartida]
+            <ul class="code_li">
+                <li>path = /home/winuser/compartida</li>
+                <li>browseable = yes</li>
+                <li>read only = no</li>
+                <li>valid users = winuser</li>
+            </ul>
+        </code>
+        <img id="howto_2" src="resources/linux/Paso15nano.png" alt="">
+        <p>
+            Guardamos este archivo con la combinación de teclas "Ctrl + S" y salimos del archivo después de haber guardado con la combinación
+            "Ctrl + X".
+            <br>
+            Una vez guardada esta configuración, tenemos que asignarle a Samba el usuario "winuser" y una contraseña, para ello:
+        </p>
+        <code>smbpasswd -a winuser</code>
+        <img id="howto_2" src="/resources/linux/Paso15SMBPass.png" alt="">
+        <p>
+            Por último debemos reiniciar el proceso de Samba para que se apliquen todas las configuraciones. Utilizamos el comando:
+        </p>
+        <code>systemctl restart smbd.service</code>
+
+
+        <!--Paso 8-->
+        <h1 id="paso8linux">8. Dirección IP</h1>
+        <p>
+            El último paso de este tutorial en Linux es recoger la dirección IP de esta máquina para, desde Windows, entrar a la carpeta
+            compartida. El siguiente comando nos enseña toda la información de red de esta máquina virtual, la dirección que necesitamos
+            es la subrayada que se puede ver en la siguiente imagen.
+        </p>
+        <code>ip a</code>
+        <img id="howto_2" src="/resources/linux/Paso16IP.png" alt="">
+    </main>
+    <footer>
+        fdlsjfd
+    </footer>
 </body>
 </html>

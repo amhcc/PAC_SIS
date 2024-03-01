@@ -70,21 +70,6 @@ a {
     z-index: 0; /* Define el nivel de profundidad del objeto */
 }
 
-/* Div contenido principal */
-.main_cont {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 450;
-    font-style: normal;
-    font-variation-settings:
-      "slnt" 0;  
-    position: absolute;
-    display: block;
-    column-gap: 50px;
-    margin-left: 25px;
-    z-index: 0; /* Define el nivel de profundidad del objeto */
-}
-
 /* Imagenes pagina principal */
 #images_img {
     height: 250px;
@@ -145,7 +130,7 @@ a {
 }
 
 /* Indice contenidos */
-.index {
+#index {
     background-color: #283044;
     height: 100vh;
     top: 0;
@@ -157,19 +142,31 @@ a {
     position: fixed;
     width: 250px;
     z-index: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
 }
 
 /* Enlaces del indice de contenidos */
-.index a {
+#index a {
     color: #EBF5EE;
 }
 
 /* Contenidos how-to */
-.contenidos {
-    position: absolute;
+main {
+    position: relative;
     width: auto;
     left: 300px;
     justify-content: center;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
 }
 
 /* Estilos imagenes how-to */
@@ -214,6 +211,6 @@ code {
 
 footer {
     background-color: #283044;
-    height: 150px;
+    height: 75px;
     width: 100%;
 }
