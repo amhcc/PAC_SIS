@@ -1,6 +1,12 @@
 body {
     background-color: #EFE5DC;
     margin: 0px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
 }
 
 header {
@@ -8,7 +14,7 @@ header {
     position: static;
     height: 100px;
     width: 100%;
-    z-index: 1000; /* Define el nivel de profundidad del objeto */
+    box-shadow: 0px 2px 10px #000000;
 }
 
 a {
@@ -35,17 +41,11 @@ a {
 
 /* Panel de navegacion */
 .header_nav {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 450;
-    font-style: normal;
-    font-variation-settings:
-      "slnt" 0;
     position: relative;
     display: flex;
     justify-content: center;
     gap: 10px;
-    top: 25%;
+    top: 60%;
     text-align: center;
 }
 
@@ -53,25 +53,16 @@ a {
 #header_a {
     position: relative;
     background-color: #78A1BB;
-    box-shadow: 2px 2px 10px #000000;
-    border-radius: 20px;
     color: #EBF5EE;
     text-decoration: none;
     padding: 10px;
 }
 
 .main {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 450;
-    font-style: normal;
-    font-variation-settings:
-      "slnt" 0;  
     position: absolute;
     display: grid;
     top: 15%;
     margin-left: 5%;
-    z-index: 0; /* Define el nivel de profundidad del objeto */
 }
 
 /* Imagenes pagina principal */
@@ -97,6 +88,7 @@ a {
 
 /* Contenidos pagina principal */
 .contents1 {
+    color: #000000;
     background-color: #e2e2e2;
     box-shadow: 2px 2px 10px #283044;
     position: relative;
@@ -109,6 +101,7 @@ a {
     border-radius: 15px;
 }
 .contents2 {
+    color: #000000;
     background-color: #e2e2e2;
     box-shadow: 2px 2px 10px #283044;
     position: relative;
@@ -121,6 +114,7 @@ a {
     border-radius: 15px;
 }
 .contents3 {
+    color: #000000;
     background-color: #e2e2e2;
     box-shadow: 2px 2px 10px #283044;
     position: relative;
@@ -145,13 +139,7 @@ a {
     color: #EBF5EE;
     position: sticky;
     width: 250px;
-    z-index: 0;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 450;
-    font-style: normal;
-    font-variation-settings:
-      "slnt" 0;
+    z-index: 100; /* Define el nivel de profundidad del elemento, en este caso por encima del resto */
 }
 
 /* Enlaces del indice de contenidos */
@@ -165,18 +153,24 @@ a {
 
 /* Contenidos how-to */
 main {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 450;
-    font-style: normal;
-    font-variation-settings:
-      "slnt" 0;
     position: relative;
     display: inline-block;
     width: 60%;
     height: auto;
     top: 0;
     left: 25px;
+}
+
+/* Contenidos index.html */
+.main_index {
+    left: 0;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+.introduction {
+    margin-bottom: 5%;
 }
 
 /* Estilos imagenes how-to */
@@ -207,6 +201,10 @@ code {
     font-weight: 600;
 }
 
+li {
+    margin-top: 10px;
+}
+
 .code_li {
     list-style-type: none;
 }
@@ -214,9 +212,8 @@ code {
 /* Icono principal */
 .icon_h {
     transform: scaleX(-1);
-    width: 150px;
+    width: 125px;
     position: absolute;
-    z-index: 1000;
 }
 
 footer {
@@ -226,7 +223,8 @@ footer {
     display: flex;
     flex-direction: row-reverse;
     gap: 50px;
-    height: 50px;
+    height: fit-content;
     align-items: center;
     padding: 10px;
+    box-shadow: 0px 2px 10px #000000;
 }
