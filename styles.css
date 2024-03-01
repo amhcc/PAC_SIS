@@ -5,14 +5,28 @@ body {
 
 header {
     background-color: #283044;
-    position: fixed;
-    height: 10%;
+    position: static;
+    height: 100px;
     width: 100%;
     z-index: 1000; /* Define el nivel de profundidad del objeto */
 }
 
 a {
     text-decoration: none;
+}
+
+/* Boton volver arriba */
+.up {
+    position: fixed;
+    color: #283044;
+    font-weight: bold;
+    font-size: 50px;
+    height: 30px;
+    width: 30px;
+    left: 95%;
+    top: 93%;
+    border-radius: 20px;
+    text-align: center;
 }
 
 /* Panel de navegacion */
@@ -56,6 +70,7 @@ a {
     z-index: 0; /* Define el nivel de profundidad del objeto */
 }
 
+/* Div contenido principal */
 .main_cont {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -66,11 +81,11 @@ a {
     position: absolute;
     display: block;
     column-gap: 50px;
-    top: 15%;
     margin-left: 25px;
     z-index: 0; /* Define el nivel de profundidad del objeto */
 }
 
+/* Imagenes pagina principal */
 #images_img {
     height: 250px;
     width: 250px;
@@ -91,6 +106,7 @@ a {
     grid-column: 1;
 }
 
+/* Contenidos pagina principal */
 .contents1 {
     background-color: #e2e2e2;
     box-shadow: 2px 2px 10px #283044;
@@ -127,20 +143,36 @@ a {
     padding-right: 15px;
     border-radius: 15px;
 }
-/* todo: fix spacing, give format to index */
+
+/* Indice contenidos */
 .index {
+    background-color: #283044;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding-top: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #EBF5EE;
     position: fixed;
     width: 250px;
+    z-index: 0;
 }
 
-.linux_cont {
+/* Enlaces del indice de contenidos */
+.index a {
+    color: #EBF5EE;
+}
+
+/* Contenidos how-to */
+.contenidos {
     position: absolute;
     width: auto;
     left: 300px;
     justify-content: center;
 }
 
-/* Contenidos how-to */
+/* Estilos imagenes how-to */
 #howto_1 {
     height: 500px;
     width: 700px;
@@ -157,6 +189,7 @@ a {
     box-shadow: 2px 2px 10px #000000;
 }
 
+/* Codigo para usar how-to */
 code {
     color: #EBF5EE;
     display: block;
@@ -171,8 +204,16 @@ code {
     list-style-type: none;
 }
 
+/* Icono principal */
 .icon_h {
     transform: scaleX(-1);
     width: 150px;
-    position: inherit;
+    position: absolute;
+    z-index: 1000;
+}
+
+footer {
+    background-color: #283044;
+    height: 150px;
+    width: 100%;
 }

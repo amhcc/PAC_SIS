@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <img class="icon_h" src="resources/Header_logo.png" alt="logo">
+        <img class="icon_h" id="icon_h" src="resources/Header_logo.png" alt="logo">
         <nav class="header_nav">
             <a id="header_a" href="index.html">Inicio</a>
             <a id="header_a" href="virtualbox.html">Instalacion VirtualBox</a>
@@ -29,9 +29,12 @@
                 <li><a href="#paso4linux">4. Samba</a></li>
                 <li><a href="#paso5linux">5. Creación de usuario</a></li>
                 <li><a href="#paso6linux">6. Creación de directorio compartido</a></li>
+                <li><a href="#paso7linux">7. Configuración de Samba</a></li>
+                <li><a href="#paso8linux">8. Dirección IP</a></li>
             </ul>
         </div>
-        <div class="linux_cont">
+        <div class="contenidos">
+            <a href="#icon_h" class="up">^</a>
             <!--Paso 1-->
             <h1 id="paso1linux">1. Descarga del archivo .iso</h1>
             <p>
@@ -40,7 +43,7 @@
                 de Linux Pop!_os. Para ello descargaremos el archivo del siguiente <a href="https://pop.system76.com/" target="_blank">enlace</a>.
                 Y seleccionaremos la primera opción.
             </p>
-            <a id="howto_1" href="https://pop.system76.com/" target="_blank"><img id="howto_1" src="resources/linux/Paso1Descarga.png" alt="Paso1Descarga"></a>
+            <a href="https://pop.system76.com/" target="_blank"><img id="howto_1" src="resources/linux/Paso1Descarga.png" alt="Paso1Descarga"></a>
            
             <!--Paso 2-->
             <h1 id="paso2linux">2. Creación y configuración en VirtualBox</h1>
@@ -129,7 +132,7 @@
 
 
             <!--Paso 6-->
-            <h1 id="#paso6linux">6. Creación de directorio compartido</h1>
+            <h1 id="paso6linux">6. Creación de directorio compartido</h1>
             <p>
                 Después de haber creado el nuevo usuario, cambiaremos a este con el comando:
             </p>
@@ -168,7 +171,7 @@
 
 
             <!--Paso 7-->
-            <h1 id="#paso7linux">7. Configuración de Samba</h1>
+            <h1 id="paso7linux">7. Configuración de Samba</h1>
             <p>
                 Samba es una implementación de Windows SMB, lo utilizaremos para compartir el archivo que hemos creado con Windows.
                 Para poder utilizar este, necesitamos añadir nuestra carpeta creada, junto con unos atributos que veremos siguientemente.
@@ -209,7 +212,7 @@
 
 
             <!--Paso 8-->
-            <h1>8. Dirección IP</h1>
+            <h1 id="paso8linux">8. Dirección IP</h1>
             <p>
                 El último paso de este tutorial en Linux es recoger la dirección IP de esta máquina para, desde Windows, entrar a la carpeta
                 compartida. El siguiente comando nos enseña toda la información de red de esta máquina virtual, la dirección que necesitamos
